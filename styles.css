@@ -1,0 +1,13 @@
+/* Add application styles & imports to this file! */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "jasmine-core/lib/jasmine-core/jasmine.css";
+
+.layout p {
+  margin: 0px;
+}
+
+.layout > * {
+  margin: 10px;
+  display: block;
+  overflow: hidden;
+}

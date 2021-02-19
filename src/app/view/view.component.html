@@ -1,0 +1,24 @@
+<div class="col-md-12">
+	<h2>View Area</h2>
+	<div class="row">
+		<div *ngFor="let table of fileTables | async" class="col">
+			List of {{ table.fileType }} files
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Size</th>
+						<th>Date</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let file of table.files; index as j; first as isFirst">
+						<td>{{ file.fileName }}</td>
+						<td>{{ file.fileSize }}</td>
+						<td>{{ file.uploadDate | date: 'yyyy-MM-dd' }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
